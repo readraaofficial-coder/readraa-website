@@ -1,0 +1,255 @@
+{
+  "users": [
+    {
+      "id": 1756645043353,
+      "name": "rishikesh",
+      "email": "rishikeshtiwari454@gmail.com",
+      "password": "$2a$10$zr4NfiVhN8Kfc0FAWanWV.PwHxRt7mEYqO/JMd92cFCT9InnJOoOS",
+      "favorites": [
+        "THE PSYCHOLOGY OF MONEY SUMMARY_dark.pdf",
+        "THE PSYCHOLOGY OF MONEY SUMMARY_light.pdf",
+        "THE POWER OF NOW SUMMARY_light.pdf",
+        "BLINK_light.pdf",
+        "OUTLIERS _dark",
+        "HOW TO WIN FRIENDS AND INFLUENCE PEOPLE SUMMARY_light",
+        "BLINK_dark",
+        "THE INTELLIGENT INVESTOR SUMMARY",
+        "You Are a Badass",
+        "TO KILL A MOCKINGBIRD SUMMARY",
+        "GRIT"
+      ],
+      "viewed": [
+        {
+          "pdf": "AWAKEN THE GIANT WITHIN SUMMARY_dark.pdf",
+          "date": "2025-09-01T01:51:17.412Z"
+        },
+        {
+          "pdf": "THE 7 HABITS OF HIGHLY EFFECTIVE PEOPLE SUMMARY_light.pdf",
+          "date": "2025-09-01T01:50:36.971Z"
+        },
+        {
+          "pdf": "THE POWER OF NOW SUMMARY_light.pdf",
+          "date": "2025-09-01T01:48:50.086Z"
+        },
+        {
+          "pdf": "THE POWER OF NOW SUMMARY_light.pdf",
+          "date": "2025-09-01T01:48:44.570Z"
+        },
+        {
+          "pdf": "THE POWER OF NOW SUMMARY_light.pdf",
+          "date": "2025-09-01T01:48:35.039Z"
+        },
+        {
+          "pdf": "THE FOUR AGREEMENTS SUMMARY_light.pdf",
+          "date": "2025-09-01T01:46:40.956Z"
+        },
+        {
+          "pdf": "The Power Of Now Summary-L",
+          "date": "2025-08-31T16:22:33.214Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (W)",
+          "date": "2025-08-31T15:24:20.167Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (W)",
+          "date": "2025-08-31T15:24:20.160Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (W)",
+          "date": "2025-08-31T15:24:15.044Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (W)",
+          "date": "2025-08-31T15:24:15.037Z"
+        },
+        {
+          "pdf": "Atomic Habits Summary-L",
+          "date": "2025-08-31T15:23:34.650Z"
+        },
+        {
+          "pdf": "Atomic Habits Summary-L",
+          "date": "2025-08-31T15:23:34.638Z"
+        },
+        {
+          "pdf": "ATOMIC HABITS SUMMARY (B)",
+          "date": "2025-08-31T15:23:21.270Z"
+        },
+        {
+          "pdf": "ATOMIC HABITS SUMMARY (B)",
+          "date": "2025-08-31T15:23:21.261Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (B)",
+          "date": "2025-08-31T15:20:06.830Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (B)",
+          "date": "2025-08-31T15:20:06.822Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (B)",
+          "date": "2025-08-31T15:19:59.727Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (B)",
+          "date": "2025-08-31T15:19:59.720Z"
+        },
+        {
+          "pdf": "Blink-D",
+          "date": "2025-08-31T15:19:53.310Z"
+        },
+        {
+          "pdf": "Blink-D",
+          "date": "2025-08-31T15:19:53.304Z"
+        },
+        {
+          "pdf": "Blink-D",
+          "date": "2025-08-31T15:19:44.880Z"
+        },
+        {
+          "pdf": "Blink-D",
+          "date": "2025-08-31T15:19:44.871Z"
+        },
+        {
+          "pdf": "Blink-D",
+          "date": "2025-08-31T15:19:39.539Z"
+        },
+        {
+          "pdf": "Blink-D",
+          "date": "2025-08-31T15:19:39.527Z"
+        },
+        {
+          "pdf": "You Are A Badass Summary",
+          "date": "2025-08-31T15:16:29.243Z"
+        },
+        {
+          "pdf": "You Are A Badass Summary",
+          "date": "2025-08-31T15:16:29.238Z"
+        },
+        {
+          "pdf": "You Are A Badass Summary",
+          "date": "2025-08-31T15:16:24.600Z"
+        },
+        {
+          "pdf": "You Are A Badass Summary",
+          "date": "2025-08-31T15:16:24.594Z"
+        },
+        {
+          "pdf": "You Are A Badass Summary",
+          "date": "2025-08-31T15:16:19.222Z"
+        },
+        {
+          "pdf": "You Are A Badass Summary",
+          "date": "2025-08-31T15:16:19.180Z"
+        },
+        {
+          "pdf": "YOU ARE A BADASS SUMMARY (W)",
+          "date": "2025-08-31T12:58:33.100Z"
+        }
+      ],
+      "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=1",
+      "nameChangeCount": 3,
+      "lastChangeTimestamp": 1756927480841
+    },
+    {
+      "id": 1756789317150,
+      "name": "R.S.M.",
+      "email": "readraa@gmail.com",
+      "password": "$2a$10$Yean0rofo22HeyiEtCAqAuPQwZ2.wCkgLwqJ0nNsmysvycnQqmnSu",
+      "favorites": [],
+      "viewed": [],
+      "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=98",
+      "nameChangeCount": 3,
+      "lastChangeTimestamp": 1756946321845
+    },
+    {
+      "id": 1756917262453,
+      "name": "rishikesh",
+      "email": "rishikeshtiwari4@gmail.com",
+      "password": "$2a$10$L01wkbLwhYjbsHQIKY3ptemtYDIJw8f2V1BZzoGqjDyj7Ag8s.m6a",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": 1756917361819,
+      "name": "who are you.",
+      "email": "rinkaltiwari036@gmail.com",
+      "password": "$2a$10$MJgH8zYqm334TNSxZR4rn.wcPOxIV/orDe5yYuuqbcA4KjhHlI/o.",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 3,
+      "lastChangeTimestamp": 1756946049048
+    },
+    {
+      "id": 1756918345921,
+      "name": "IAM IRON MAN.",
+      "email": "tiwarirish3@gmail.com",
+      "password": "$2a$10$HB8uyMBIx7uQu1GSes73VulMJNZ8yyF4lmIndnh8InMnPQoNOcuvS",
+      "phoneNumber": "7666346742",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 2,
+      "lastChangeTimestamp": 1756924426307
+    },
+    {
+      "id": 1756925128869,
+      "name": "bbbbbbbbbbbbbb bb",
+      "email": "vvvuy@gmail.com",
+      "password": "$2a$10$FzZA0ZNYPm5.sAKW8DRvf.2n8zAad3VC2d4d7jSsbgNB0no40qTQq",
+      "phoneNumber": "+1",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1756962805524,
+      "name": "bgf",
+      "email": "bg@gmail.com",
+      "password": "$2a$10$NS9oMW9bzNbJKTk4p7489O/QOLxF32huoHIGkvfzSKWSLXw7Ah53a",
+      "phoneNumber": null,
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1756963180777,
+      "name": "ser",
+      "email": "shjjv@gmail.com",
+      "password": "$2a$10$WFUt1L5.k3Mw81N011zuO.oNWUdY1eSvI8FaFZdZ55ax/LDjNAsTy",
+      "phoneNumber": null,
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    }
+  ],
+  "pdfs": [],
+  "stories": [
+    {
+      "id": 1757005255183,
+      "userId": 1756645043353,
+      "author": "rishikesh",
+      "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=1",
+      "title": "gbfg",
+      "content": "gh",
+      "createdAt": "2025-09-04T17:00:55.183Z",
+      "comments": []
+    }
+  ],
+  "drafts": [],
+  "otps": [
+    {
+      "userId": 1756918345921,
+      "otp": "886794",
+      "expiresAt": 1756919148071
+    },
+    {
+      "userId": 1756645043353,
+      "otp": "790660",
+      "expiresAt": 1756921459639
+    }
+  ]
+}
