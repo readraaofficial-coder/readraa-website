@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 5002;
+const PORT = process.env.PORT || 5003;
 const DATA_FILE = path.join(__dirname, "data.json");
 const SECRET = process.env.JWT_SECRET || "supersecretkey"; // set env var in production
 
@@ -75,7 +75,7 @@ async function authorizeStoryAction(req, res, next) {
 
   // Check if user is the story owner or an admin
   const user = data.users.find(u => u.id === req.userId);
-  const isAdmin = user && user.email === "readraa@gmail.com"; // Assuming admin email is still "readraa@gmail.com"
+  const isAdmin = user && user.email === "readraaofficial@gmail.com"; // Assuming admin email is still "readraaofficial@gmail.com"
 
   if (story.userId === req.userId || isAdmin) {
     req.story = story; // Attach story to request for later use
@@ -108,7 +108,7 @@ async function authorizeCommentAction(req, res, next) {
 
   // Check if user is the comment owner or an admin
   const user = data.users.find(u => u.id === req.userId);
-  const isAdmin = user && user.email === "readraa@gmail.com"; // Assuming admin email is still "readraa@gmail.com"
+  const isAdmin = user && user.email === "readraaofficial@gmail.com"; // Assuming admin email is still "readraaofficial@gmail.com"
 
   if (foundComment.userId === req.userId || isAdmin) {
     req.comment = foundComment; // Attach comment to request
@@ -122,6 +122,7 @@ async function authorizeCommentAction(req, res, next) {
 // --------- API ROUTES ----------
 // --------- AUTH ----------
 app.post("/api/register", async (req, res) => {
+  console.log("Request body:", req.body);
   let { name, email, password, phoneNumber } = req.body; // Added phoneNumber, use let for name
   const data = readData();
 
@@ -130,8 +131,8 @@ app.post("/api/register", async (req, res) => {
   if (name.length < 2 || name.length > 20) {
     return res.status(400).json({ message: "Name must be between 2 and 20 characters long." });
   }
-  if (!/^[a-zA-Z0-9\s\-\'\.]+\$/.test(name)) { // Allowed characters
-    return res.status(400).json({ message: "Name can only contain letters, numbers, spaces, hyphens, apostrophes, and periods." });
+  if (!/^[a-zA-Z\s]+$/.test(name)) {
+    return res.status(400).json({ message: "Name can only contain letters and spaces." });
   }
   if (/\s\s+/.test(name)) { // No consecutive spaces
     return res.status(400).json({ message: "Name cannot contain consecutive spaces." });
@@ -189,7 +190,7 @@ app.post("/api/login", async (req, res) => {
   if (!valid) return res.status(400).json({ message: "Invalid password" });
 
   console.log("User logging in:", user); // Debug log
-  const isAdmin = user.email === "readraa@gmail.com";
+  const isAdmin = user.email === "readraaofficial@gmail.com";
   const token = jwt.sign({ id: user.id, isAdmin }, SECRET, { expiresIn: "6h" });
 
   res.json({ token, name: user.name, email: user.email, isAdmin, id: user.id });
@@ -277,7 +278,7 @@ app.get("/api/profile", auth, (req, res) => {
   const user = data.users.find(u => u.id === req.userId);
   if (!user) return res.status(404).json({ message: "User not found" });
 
-  const isAdmin = user.email === "readraa@gmail.com";
+  const isAdmin = user.email === "readraaofficial@gmail.com";
   res.json({ name: user.name, email: user.email, favorites: user.favorites || [], viewed: user.viewed || [], isAdmin, id: user.id, avatarUrl: user.avatarUrl });
 });
 
@@ -563,7 +564,7 @@ app.get("/api/stories", (req, res) => {
   const data = readData();
   const storiesWithAdminStatus = (data.stories || []).map(story => {
     const user = data.users.find(u => u.id === story.userId);
-    const isAdmin = user ? user.email === "readraa@gmail.com" : false; // Determine if author is admin
+    const isAdmin = user ? user.email === "readraaofficial@gmail.com" : false; // Determine if author is admin
     const reactions = story.reactions || {};
     const reactionCounts = Object.keys(reactions).reduce((acc, emoji) => {
       if (Array.isArray(reactions[emoji])) {
@@ -841,7 +842,7 @@ app.get("/api/users/:userId/drafts", auth, (req, res) => {
 
   const draftsWithAdminStatus = userDrafts.map(draft => {
     const user = data.users.find(u => u.id === draft.userId);
-    const isAdmin = user ? user.email === "readraa@gmail.com" : false; // Determine if author is admin
+    const isAdmin = user ? user.email === "readraaofficial@gmail.com" : false; // Determine if author is admin
     return { ...draft, isAdmin }; // Add isAdmin to draft object
   });
 
