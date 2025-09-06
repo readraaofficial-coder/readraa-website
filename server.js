@@ -8,7 +8,11 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
 const app = express();
+<<<<<<< HEAD
 const PORT = process.env.PORT || 5000;
+=======
+const PORT = process.env.PORT || 5003;
+>>>>>>> 61c45b4be6582092088112d06cda58b471933041
 const DATA_FILE = path.join(__dirname, "data.json");
 const SECRET = process.env.JWT_SECRET || "supersecretkey"; // set env var in production
 
@@ -161,6 +165,7 @@ app.post("/api/register", async (req, res) => {
   const data = readData();
 
   // Server-side name validation
+<<<<<<< HEAD
   if (/\s/.test(name)) {
     return res.status(400).json({ message: "Name cannot contain spaces." });
   }
@@ -174,6 +179,31 @@ app.post("/api/register", async (req, res) => {
   // Password validation
   if (/\s/.test(password)) {
     return res.status(400).json({ message: "Password cannot contain spaces." });
+=======
+  if (name.length < 2 || name.length > 15) {
+    return res.status(400).json({ message: "Name must be between 2 and 15 characters long." });
+  }
+<<<<<<< HEAD
+  if (!/^[a-zA-Z0-9_*\-^!]+$/.test(name)) {
+    return res.status(400).json({ message: "Name can only contain letters, numbers, and the following special characters: _ * - ^ !" });
+=======
+<<<<<<< HEAD
+  if (!/^[a-zA-Z0-9_*\-^!]+$/.test(name)) {
+    return res.status(400).json({ message: "Name can only contain letters, numbers, and the following special characters: _ * - ^ !" });
+=======
+  if (!/^[a-zA-Z\s]+$/.test(name)) {
+    return res.status(400).json({ message: "Name can only contain letters and spaces." });
+  }
+  if (/\s\s+/.test(name)) { // No consecutive spaces
+    return res.status(400).json({ message: "Name cannot contain consecutive spaces." });
+>>>>>>> origin/main
+>>>>>>> 2109be45a034e85cdb35eeb7663adaf98ff9a3b9
+  }
+
+  // Password validation
+  if (password.length < 5 || password.length > 20) {
+    return res.status(400).json({ message: "Password must be between 5 and 20 characters long." });
+>>>>>>> 61c45b4be6582092088112d06cda58b471933041
   }
   if (password.length < 5) {
     return res.status(400).json({ message: "Password must be at least 5 characters long." });
@@ -182,22 +212,31 @@ app.post("/api/register", async (req, res) => {
   if (!name || !email || !password) return res.status(400).json({ message: "Missing fields" });
 
   // Normalize phoneNumber: if it's just a prefix or empty, treat as null
-  const isJustPrefix = commonPrefixes.some(prefix => prefix === phoneNumber);
+  /* const isJustPrefix = commonPrefixes.some(prefix => prefix === phoneNumber);
   if (isJustPrefix || phoneNumber === "") {
     phoneNumber = null;
-  } // Added phoneNumber check
+  } // Added phoneNumber check */
 
   if (data.users.find(u => u.email === email)) {
     return res.status(400).json({ message: "Email already registered" });
   }
+<<<<<<< HEAD
   
+=======
+  // Check phone number uniqueness ONLY if a phone number was actually provided (i.e., not null)
+  /* if (phoneNumber !== null) { // Only perform this check if phoneNumber is not null
+    if (data.users.some(u => u.phoneNumber === phoneNumber)) { // Use .some() for existence check
+      return res.status(400).json({ message: "Phone number already registered" });
+    }
+  } */
+>>>>>>> 61c45b4be6582092088112d06cda58b471933041
   const hashed = await bcrypt.hash(password, 10);
   const newUser = {
     id: Date.now(),
     name,
     email,
     password: hashed,
-    phoneNumber,
+    // phoneNumber,
     favorites: [],
     viewed: [],
     nameChangeCount: 0, // Initialize name change count
