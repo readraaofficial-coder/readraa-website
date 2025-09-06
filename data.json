@@ -155,7 +155,7 @@
     {
       "id": 1756789317150,
       "name": "R.S.M.",
-      "email": "readraa@gmail.com",
+      "email": "readraaofficial@gmail.com",
       "password": "$2a$10$Yean0rofo22HeyiEtCAqAuPQwZ2.wCkgLwqJ0nNsmysvycnQqmnSu",
       "favorites": [],
       "viewed": [],
@@ -224,18 +224,122 @@
       "viewed": [],
       "nameChangeCount": 0,
       "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757028052085,
+      "name": "tgr",
+      "email": "tg@gmail.com",
+      "password": "$2a$10$mX2TfiCkHRcvIiPWnbzHO.JC.3iabcyDDUnqsI7ZVAKWFcpXo6a3K",
+      "phoneNumber": null,
+      "favorites": [
+        "ATOMIC HABITS SUMMARY"
+      ],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757044631337,
+      "name": "std",
+      "email": "tds@gmail.com",
+      "password": "$2a$10$jUmGonMoHSDcv07o5OGpRePPDAzJPxI17p2UEEa2H0tJsi994L7BW",
+      "phoneNumber": null,
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757079602592,
+      "name": "yuc",
+      "email": "suj@gmail.com",
+      "password": "$2a$10$DGAaaDqV4p7TtPNzGbiCuOLqPPUYiRYa4h/6dhilIKP3psjp4RwiG",
+      "phoneNumber": "+1Feature coming soon",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757081661184,
+      "name": "gygerfs",
+      "email": "qhyjda@gmail.com",
+      "password": "$2a$10$laiAvMEwac0ssv4mf3luWeKPqP3ZKJKv3ipmWGbPjcAOvkD0mt.Li",
+      "phoneNumber": "+1Feature coming soon",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757081960901,
+      "name": "gygerfs",
+      "email": "qhyja@gmail.com",
+      "password": "$2a$10$pi6Prszqbj1pdnfzDLpcTOoRfJQwEetPDttXtFHpcG07iQgDqduZ6",
+      "phoneNumber": "+1Feature coming soon",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757178067377,
+      "name": "ghvy",
+      "email": "hgf@gmail.com",
+      "password": "$2a$10$6LgC3OVZZtREhxBltLoFo.q0pAlYMiAE60ZgfaoL5dKy5VQc.xg76",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757179934214,
+      "name": "grd23",
+      "email": "jghf@gmail.com",
+      "password": "$2a$10$uV1oMiIRwvLba8m3LcKNWu821FUd3bMQ1jMe0OUmbEcl0MHIJQXG6",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757179952453,
+      "name": "grhggjg467",
+      "email": "jhf@gmail.com",
+      "password": "$2a$10$fF7o6eYqFW9j8fkSZt6MPumZEdoDHWd6bh2ilU4UBCCbGmCVHvujC",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
     }
   ],
   "pdfs": [],
   "stories": [
     {
-      "id": 1757005255183,
+      "id": 1757044540253,
+      "userId": 1756789317150,
+      "author": "R.S.M.",
+      "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=98",
+      "title": "ADMIN",
+      "content": "Be the 2nd one to post story ",
+      "createdAt": "2025-09-05T03:55:40.253Z",
+      "comments": [],
+      "updatedAt": "2025-09-05T03:59:48.309Z",
+      "reactions": {
+        "😂": [
+          1756789317150,
+          1756645043353
+        ]
+      }
+    },
+    {
+      "id": 1757081702919,
       "userId": 1756645043353,
       "author": "rishikesh",
       "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=1",
-      "title": "gbfg",
-      "content": "gh",
-      "createdAt": "2025-09-04T17:00:55.183Z",
+      "title": "hjcs",
+      "content": "hjdgvy",
+      "createdAt": "2025-09-05T14:15:02.919Z",
       "comments": []
     }
   ],

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Readra - Wisdom in Minutes: Discover, read, and interact with concise PDF summaries of books. Gain valuable insights in minutes.">
-  <meta name="keywords" content="Readra, PDF summaries, book summaries, knowledge, learning, concise books, wisdom, self-help, finance, psychology">
+  <meta name="description" content="Readraa - Wisdom in Minutes: Discover, read, and interact with concise PDF summaries of books. Gain valuable insights in minutes.">
+  <meta name="keywords" content="Readraa, PDF summaries, book summaries, knowledge, learning, concise books, wisdom, self-help, finance, psychology">
   <title>Readraa - Wisdom in Minutes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,88 +21,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     /* (Full CSS from user; minified here for brevity) */
-:root{--primary-color:#4e54c8;--secondary-color:#8f94fb;--text-color:#333;--bg-color:#f9f9f9;--card-bg:#ffffff;--shadow:0 4px 12px rgba(0,0,0,.1);--transition:all .3s ease}.dark-mode{--primary-color:#6b73ff;--secondary-color:#a2a7ff;--text-color:#f0f0f0;--bg-color:#121212;--card-bg:#1e1e1e;--shadow:0 4px 12px rgba(0,0,0,.3)}*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;transition:var(--transition)}body{background-color:var(--bg-color);color:var(--text-color);min-height:100vh;padding:70px 0 60px 0;opacity:0;animation:fadeIn .5s ease forwards;font-family:'Roboto', sans-serif; position: relative;}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.top-nav,.bottom-nav{position:fixed;left:0;right:0;background-color:var(--card-bg);box-shadow:var(--shadow);display:flex;align-items:center;padding:0 10px;z-index:1000}.top-nav{top:0;height:70px;justify-content:space-between}.logo-container{display:flex;flex-direction:column}.logo-main{font-size:32px;font-weight:bold;color:var(--primary-color)}.logo-sub{font-size:10px;color:var(--text-color);margin-top:-4px}.theme-toggle{background:none;border:none;cursor:pointer;font-size:24px;color:var(--text-color);transition:transform .3s ease}.theme-toggle:hover{transform:scale(1.1)}.bottom-nav{bottom:0;height:60px;justify-content:space-around}.nav-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;background:none;border:none;color:var(--text-color);font-size:12px;cursor:pointer;padding:8px 12px;border-radius:8px;transition:var(--transition)}.nav-btn i{font-size:18px;margin-bottom:4px}.nav-btn.active{color:var(--primary-color);background-color:rgba(78,84,200,.1)}.nav-btn:hover{transform:translateY(-2px)}.page{display:none;}.page.active{display:block;animation:fadeIn .5s ease}.section-title{margin:20px 0 15px;font-size:22px;color:var(--primary-color);position:relative;padding-left:15px}.section-title::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);height:24px;width:5px;background-color:var(--primary-color);border-radius:2px}.content-section{padding:10px 15px;margin-bottom:10px}.categories-container,.library-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:15px;padding-bottom:15px}.category,.library-card{background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);padding:15px;text-align:center;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;align-items:center;min-height:180px}.category img,.library-card img{max-width:100%;height:auto;border-radius:8px;margin-bottom:10px}.category h3,.library-card h4{font-size:16px;margin-bottom:5px;color:var(--primary-color)}.category p,.library-card p{font-size:13px;color:var(--text-color);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;margin-bottom:10px}.fav-btn{position:absolute;bottom:10px;right:10px;background:none;border:none;font-size:20px;cursor:pointer;color:#ccc;transition:color .2s;z-index:10}.fav-btn.active{color:#ff6b6b}.modal{display:none;position:fixed;z-index:1001;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,.4);justify-content:center;align-items:center}.modal.active{display:flex}.modal-content{
-  background-color:var(--bg-color);
-  margin: 5% auto; /* Adjusted margin to give more vertical space */
-  padding:20px;
-  border:1px solid #888;
-  width:80%;
-  max-width: 700px;
-  height: auto; /* Allow height to adjust to content */
-  max-height: 90vh; /* Set max-height to 90% of viewport height */
-  overflow-y: auto; /* Enable vertical scrolling for content */
-  border-radius:10px;
-  box-shadow:var(--shadow);
-  position:relative;
-  white-space: normal; /* Ensure text wraps */
-}
-
-.modal-body-scrollable {
-  max-height: calc(90vh - 100px); /* Adjust as needed based on header/footer height */
-  overflow-y: auto;
-}
-
-#storyDisplayContent {
-  height: 100%; /* Ensure it takes full height of parent */
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  white-space: normal; /* Ensure text wraps */
-}
-
-#storyDisplayContent {
-  height: 100%; /* Ensure it takes full height of parent */
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  white-space: normal; /* Ensure text wraps */
-}
-
-#storyDisplayContentText {
-  max-height: 100%; /* Ensure it takes full height of parent */
-  overflow-y: auto; /* Enable vertical scrolling */
-  white-space: normal; /* Ensure text wraps */
-  word-break: break-word; /* Ensure long words break and wrap */
-}.close-modal{position:absolute;top:-11px;right:5px;color:#aaa;font-size:36px;font-weight:bold;cursor:pointer}
-
-.close-modal:hover,.close-modal:focus{color:#333}.dark-mode .close-modal:hover,.dark-mode .close-modal:focus{color:#fff}.auth-container{display:flex;flex-direction:column}.auth-tabs{display:flex;margin-bottom:20px}.auth-tab{flex:1;padding:10px;text-align:center;cursor:pointer;background-color:var(--bg-color);border-bottom:2px solid transparent;color:var(--text-color);font-weight:bold}.auth-tab.active{border-color:var(--primary-color);color:var(--primary-color)}.auth-form{display:none;flex-direction:column}.auth-form.active{display:flex}.form-group{margin-bottom:15px}.form-group label{display:block;margin-bottom:5px;color:var(--text-color)}.form-group input,.form-group textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;background-color:var(--bg-color);color:var(--text-color)}.auth-btn{background-color:var(--primary-color);color:#fff;padding:10px 15px;border:none;border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold;transition:background-color .3s}.auth-btn:hover{background-color:var(--secondary-color)}
-.auth-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.text-button {
-  background: none;
+:root{--primary-color:#4e54c8;--secondary-color:#8f94fb;--text-color:#333;--bg-color:#f9f9f9;--card-bg:#ffffff;--shadow:0 4px 12px rgba(0,0,0,.1);--transition:all .3s ease}.dark-mode{--primary-color:#6b73ff;--secondary-color:#a2a7ff;--text-color:#f0f0f0;--bg-color:#121212;--card-bg:#1e1e1e;--shadow:0 4px 12px rgba(0,0,0,.3)}*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;transition:var(--transition)}body{background-color:var(--bg-color);color:var(--text-color);min-height:100vh;padding:70px 0 60px 0;opacity:0;animation:fadeIn .5s ease forwards;font-family:'Roboto', sans-serif !important; position: relative;}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.top-nav,.bottom-nav{position:fixed;left:0;right:0;background-color:var(--card-bg);box-shadow:var(--shadow);display:flex;align-items:center;padding:0 10px;z-index:1000}.top-nav{top:0;height:70px;justify-content:space-between}.logo-container{display:flex;flex-direction:column}.logo-main{font-size:32px;font-weight:bold;color:var(--primary-color)}.logo-sub{font-size:10px;color:var(--text-color);margin-top:-4px}.theme-toggle{background:none;border:none;cursor:pointer;font-size:24px;color:var(--text-color);transition:transform .3s ease}.theme-toggle:hover{transform:scale(1.1)}.bottom-nav{bottom:0;height:60px;justify-content:space-around}.nav-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;background:none;border:none;color:var(--text-color);font-size:12px;cursor:pointer;padding:8px 12px;border-radius:8px;transition:var(--transition)}.nav-btn i{font-size:18px;margin-bottom:4px}.nav-btn.active{color:var(--primary-color);background-color:rgba(78,84,200,.1)}.nav-btn:hover{transform:translateY(-2px)}.page{display:none;}.page.active{display:block;animation:fadeIn .5s ease}.section-title{margin:20px 0 15px;font-size:22px;color:var(--primary-color);position:relative;padding-left:15px}.section-title::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:100%;background-color:var(--primary-color);border-radius:2px}.modal{display:none;position:fixed;z-index:1001;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,.5)}.modal-content{background-color:var(--bg-color);margin:15% auto;padding:20px;border:1px solid #888;width:80%;max-width:500px;border-radius:10px;box-shadow:var(--shadow);position:relative}.close-modal{position:absolute;top:10px;right:15px;color:#aaa;font-size:28px;font-weight:bold;cursor:pointer}.close-modal:hover,.close-modal:focus{color:#333}.dark-mode .close-modal:hover,.dark-mode .close-modal:focus{color:#fff}.auth-container{display:flex;flex-direction:column}.auth-tabs{display:flex;margin-bottom:20px}.auth-tab{flex:1;padding:10px;text-align:center;cursor:pointer;background-color:var(--bg-color);border-bottom:2px solid transparent;color:var(--text-color);font-weight:bold}.auth-tab.active{border-color:var(--primary-color);color:var(--primary-color)}.auth-form{display:none;flex-direction:column}.auth-form.active{display:flex}.form-group{margin-bottom:15px}.form-group label{display:block;margin-bottom:5px;color:var(--text-color)}.form-group input,.form-group textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;background-color:var(--bg-color);color:var(--text-color)}.auth-btn{background-color:var(--primary-color);color:#fff;padding:10px 15px;border:none;border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold;transition:background-color .3s}.auth-btn:hover{background-color:var(--secondary-color)}
+.edit-profile-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 15px;
   border: none;
-  color: var(--primary-color); /* Use primary color for text */
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px; /* Smaller font size */
-  padding: 5px 0; /* Minimal padding */
-  text-decoration: underline; /* Underline to indicate it's clickable */
-  transition: color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color .3s;
 }
 
-.text-button:hover {
-  color: var(--secondary-color); /* Change color on hover */
-}
-
-.text-button:disabled {
-  color: #ccc; /* Grey out when disabled */
-  cursor: not-allowed;
-  text-decoration: none; /* Remove underline when disabled */
-}
-
-.forgot-password-link {
-  font-size: 12px; /* Smaller font size */
-  color: var(--primary-color); /* Use primary color */
-  text-align: center;
-  margin-top: 10px;
-  cursor: pointer; /* Show pointer on hover */
-  text-decoration: underline; /* Underline to indicate it's clickable */
-}
-
-.forgot-password-link:hover {
-  color: var(--secondary-color); /* Change color on hover */
-}.profile-header{display:flex;flex-direction:column;align-items:center;padding:20px;background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);margin-bottom:20px}.profile-avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:10px}.profile-name{font-size:20px;font-weight:bold;color:var(--primary-color)}.profile-bio{font-size:14px;color:var(--text-color)}.profile-stories{padding:0 15px}.story-card{background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);padding:15px;margin-bottom:15px}.story-card h4{font-size:16px;color:var(--primary-color);margin-bottom:5px}.story-card p{font-size:13px;color:var(--text-color);margin-bottom:10px}.story-author{display:flex;align-items:center}.author-avatar{width:30px;height:30px;border-radius:50%;margin-right:10px}.author-name{font-size:13px;font-weight:bold;color:var(--text-color)}.author-meta{font-size:11px;color:#888}.create-story{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);cursor:pointer;margin-bottom:20px}.create-story i{font-size:40px;color:var(--primary-color);margin-bottom:10px}.create-story p{font-size:16px;font-weight:bold;color:var(--text-color)}.search-bar{display:flex;gap:10px;padding:15px}.search-input{flex:1;padding:10px;border:1px solid #ccc;border-radius:8px;background-color:var(--bg-color);color:var(--text-color)}.search-btn{background-color:var(--primary-color);color:#fff;padding:10px 15px;border:none;border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold}.search-btn:hover{background-color:var(--secondary-color)}.search-categories{display:flex;flex-wrap:wrap;gap:10px;padding:0 15px 15px}.search-category{background-color:var(--card-bg);padding:8px 12px;border-radius:8px;font-size:14px;color:var(--text-color);cursor:pointer}.search-category:hover{background-color:var(--primary-color);color:#fff}.clear-btn{background-color:#f44336;color:#fff;padding:8px 12px;border:none;border-radius:8px;cursor:pointer;font-size:14px;margin-top:10px}.clear-btn:hover{background-color:#d32f2f}.edit-profile-btn{background-color:var(--primary-color);color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:bold;transition:var(--transition);border:none;cursor:pointer;margin-top:15px}.pdf-actions{display:flex;gap:10px;margin-top:15px;justify-content:center}.action-button{display:inline-block;background-color:var(--primary-color);color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:bold;transition:var(--transition);cursor:pointer}.action-button:hover{background-color:var(--secondary-color)}.read-button{}.download-button{}.top-nav .edit-profile-btn{margin-top:0;margin-right:5px}.right-nav-buttons{display:flex;align-items:center;gap:10px}
-  /* FORCED Horizontal Scrolling Sections */
+.edit-profile-btn:hover {
+  background-color: var(--secondary-color);
+}.profile-header{display:flex;flex-direction:column;align-items:center;padding:20px;background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);margin-bottom:20px}.profile-avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:10px}.profile-name{font-size:20px;font-weight:bold;color:var(--primary-color)}.profile-bio{font-size:14px;color:var(--text-color)}.profile-stories{padding:0 15px}.story-card{background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);padding:15px;margin-bottom:15px}.story-card h4{font-size:16px;color:var(--primary-color);margin-bottom:5px}.story-card p{font-size:13px;color:var(--text-color);margin-bottom:10px}.story-author{display:flex;align-items:center}.author-avatar{width:30px;height:30px;border-radius:50%;margin-right:10px}.author-name{font-size:13px;font-weight:bold;color:var(--text-color)}.author-meta{font-size:11px;color:#888}.create-story{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);cursor:pointer;margin-bottom:20px}.create-story i{font-size:40px;color:var(--primary-color);margin-bottom:10px}.create-story p{font-size:16px;font-weight:bold;color:var(--text-color)}.search-bar{display:flex;gap:10px;padding:15px}.search-input{flex:1;padding:10px;border:1px solid #ccc;border-radius:8px;background-color:var(--bg-color);color:var(--text-color)}.search-btn{background-color:var(--primary-color);color:#fff;padding:10px 15px;border:none;border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold}.search-btn:hover{background-color:var(--secondary-color)}.search-categories{display:flex;flex-wrap:wrap;gap:10px;padding:0 15px 15px}.search-category{background-color:var(--card-bg);padding:8px 12px;border-radius:8px;font-size:14px;color:var(--text-color);cursor:pointer}.search-category:hover{background-color:var(--primary-color);color:#fff}.clear-btn{background-color:#f44336;color:#fff;padding:10px 15px;border:none;border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold}.clear-btn:hover{background-color:#d32f2f}.library-section{margin-bottom:20px}.library-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:15px;padding:0 15px}.library-card{background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);padding:15px;text-align:center}.library-card h4{font-size:16px;color:var(--primary-color);margin-bottom:5px}.library-card p{font-size:13px;color:var(--text-color)}.fav-btn{background:none;border:none;font-size:20px;cursor:pointer;position:absolute;top:10px;right:10px}.fav-btn.active{color:red}#pdfModal .modal-content{max-width:800px;height:90vh}#pdfContent{width:100%;height:100%;display:flex;flex-direction:column}#pdfContent iframe{flex-grow:1;border:none}.categories-container{display:flex;overflow-x:auto;padding:10px 15px;gap:15px;scrollbar-width:none;-ms-overflow-style:none}.categories-container::-webkit-scrollbar{display:none}.category{flex:0 0 150px;background-color:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);padding:15px;text-align:center;position:relative}.category h3{font-size:16px;color:var(--primary-color);margin-bottom:5px}.category p{font-size:13px;color:var(--text-color)}.animated-emoji{position:fixed;font-size:2rem;animation:floatUp 1s ease-out forwards;pointer-events:none;z-index:9999}@keyframes floatUp{0%{transform:translate(-50%,-50%) scale(1);opacity:1}100%{transform:translate(-50%,-250%) scale(1.5);opacity:0}}/* FORCED Horizontal Scrolling Sections */
     #home .categories-container, #library .library-cards {
       display: flex !important;
       flex-direction: row !important;
@@ -253,8 +187,22 @@
     .dark-mode .social-icons .fa-x-twitter {
       color: #FFFFFF; /* X (Twitter) color for dark mode - white */
     }
-    .dark-mode .social-icons .fa-x-twitter:hover {
+    .dark-mode     .social-icons .fa-x-twitter:hover {
       color: #CCCCCC;
+    }
+
+    .social-icons .fa-youtube {
+      color: #FF0000; /* YouTube brand color */
+    }
+    .social-icons .fa-youtube:hover {
+      color: #CC0000; /* Darker shade on hover */
+    }
+
+    .social-icons .fa-snapchat-ghost {
+      color: #FFFC00; /* Snapchat brand color */
+    }
+    .social-icons .fa-snapchat-ghost:hover {
+      color: #E6E300; /* Darker shade on hover */
     }
 
 /* Scrolling Banner Styles */
@@ -784,7 +732,14 @@
   margin-left: 5px;
 }
 
+.disabled-feature {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 
+.forgot-password-link.disabled-feature:hover {
+  cursor: pointer;
+}
   </style>
 
   <style>
@@ -989,7 +944,7 @@ body.modal-open {
           <div class="form-group">
             <label for="loginPassword">Password</label>
             <div class="password-container">
-              <input type="password" id="loginPassword" required>
+              <input type="password" id="loginPassword" required onkeydown="return event.key != ' '">
               <i class="fas fa-eye toggle-password"></i>
             </div>
           </div>
@@ -1000,13 +955,13 @@ body.modal-open {
             </label>
           </div>
           <button type="submit" class="auth-btn">Login</button>
-<p class="forgot-password-link" onclick="openForgotPasswordModal()">Forgot Password?</p>
+
         </form>
 
         <form class="auth-form" id="registerForm">
           <div class="form-group">
             <label for="registerName">Full Name</label>
-            <input type="text" id="registerName" required>
+            <input type="text" id="registerName" required onkeydown="return event.key != ' '">
           </div>
           <div class="form-group">
             <label for="registerEmail">Email</label>
@@ -1015,27 +970,18 @@ body.modal-open {
           <div class="form-group">
             <label for="registerPassword">Password</label>
             <div class="password-container">
-              <input type="password" id="registerPassword" required>
+              <input type="password" id="registerPassword" required onkeydown="return event.key != ' '">
               <i class="fas fa-eye toggle-password"></i>
             </div>
           </div>
           <div class="form-group">
             <label for="registerConfirmPassword">Confirm Password</label>
             <div class="password-container">
-              <input type="password" id="registerConfirmPassword" required>
+              <input type="password" id="registerConfirmPassword" required onkeydown="return event.key != ' '">
               <i class="fas fa-eye toggle-password"></i>
             </div>
           </div>
-          <div class="form-group">
-            <label for="registerPhone">Phone Number</label>
-            <p style="font-size: 0.8em; color: #888; margin-top: -10px; margin-bottom: 5px;">Optional: Provide your number for easier password recovery.</p>
-            <div style="display: flex; gap: 5px; margin-bottom: 15px;">
-              <select id="registerPhonePrefix" style="width: 100px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: var(--bg-color); color: var(--text-color); z-index: 10;">
-                <!-- Options will be populated by JavaScript -->
-              </select>
-              <input type="tel" id="registerPhone" placeholder="e.g., 5551234567" style="flex-grow: 1;">
-            </div>
-          </div>
+          
           <button type="submit" class="auth-btn">Register</button>
         </form>
       </div>
@@ -1093,7 +1039,7 @@ body.modal-open {
       <h2 class="section-title about-us-toggle" id="aboutUsToggle">About Us <i class="fas fa-chevron-down"></i></h2>
       <div class="about-us-content">
         <!-- About Us text -->
-        <p>Readra is a platform dedicated to making knowledge more accessible by providing concise, well-structured PDF summaries of books. Our summaries are crafted to capture the essence of an entire book, allowing readers to gain valuable insights in just a few minutes.</p>
+        <p>Readraa is a platform dedicated to making knowledge more accessible by providing concise, well-structured PDF summaries of books. Our summaries are crafted to capture the essence of an entire book, allowing readers to gain valuable insights in just a few minutes.</p>
         <p>We ensure authenticity by basing each summary on the author's complete work, and we express our appreciation by crediting the author on the final page of every PDF. All summaries are protected under copyright, ensuring their originality and safeguarding them from unauthorized use.</p>
         <p>Our mission is to empower lifelong learners by distilling complex information into easily digestible formats, fostering a community passionate about continuous growth and discovery.</p>
       </div>
@@ -1102,12 +1048,13 @@ body.modal-open {
     <div class="social-section">
       <p>Follow us on</p>
       <div class="social-icons">
-        <a href="https://www.instagram.com/your-profile"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/your-profile"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com/your-profile"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/readraaofficial?igsh=YzljYTk1ODg3Zg==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@readraa" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.snapchat.com/add/readraaofficial" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+        <a href="https://x.com/readraaofficial" target="_blank"><i class="fab fa-x-twitter"></i></a>
       </div>
       <div class="legal-links">
-        <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-service.html">Terms of Service</a>
+        <a href="/privacy-policy.html" target="_blank">Privacy Policy</a> | <a href="/terms-of-service.html" target="_blank">Terms of Service</a>
       </div>
     </div>
   </section>
@@ -1157,7 +1104,7 @@ body.modal-open {
     <div class="magnifying-glass-bg"></div> <!-- Added magnifying glass background -->
     <div class="search-container" style="position: relative;">
       <div class="search-bar">
-        <input class="search-input" id="searchInput" placeholder="Search articles, PDFs, authors...">
+        <input class="search-input" id="searchInput" placeholder="Search for PDFs...">
         <button class="search-btn" id="searchButton">Search</button>
       </div>
       <div id="autocomplete-container" class="autocomplete-container"></div>
@@ -1293,56 +1240,7 @@ body.modal-open {
     </div>
   </div>
 
-  <!-- Forgot Password Modal -->
-  <div id="forgotPasswordModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeForgotPasswordModal()">&times;</span>
-      <h2>Forgot Password</h2>
-
-      <!-- Phone Number Recovery Form -->
-      <form id="forgotPasswordForm">
-        <div class="form-group">
-          <label for="forgotPhone">Phone Number</label>
-          <div style="display: flex; gap: 5px; margin-bottom: 15px;">
-            <select id="forgotPhonePrefix" style="width: 100px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: var(--bg-color); color: var(--text-color); z-index: 10;">
-              <!-- Options will be populated by JavaScript -->
-            </select>
-            <input type="tel" id="forgotPhone" placeholder="e.g., 5551234567" required style="flex-grow: 1;">
-          </div>
-        </div>
-        <button type="submit" class="auth-btn" id="sendOtpBtn">Send OTP</button>
-        <button type="button" class="text-button" id="switchToEmailBtn" style="display: block; margin-top: 10px;">Send OTP to Email</button>
-      </form>
-
-      <!-- Email Recovery Form (initially hidden) -->
-      <form id="forgotEmailForm" style="display:none;">
-        <div class="form-group">
-          <label for="forgotEmail">Email Address</label>
-          <input type="email" id="forgotEmail" required>
-        </div>
-        <button type="submit" class="auth-btn" id="sendOtpEmailBtn">Send OTP</button>
-        <button type="button" class="text-button" id="switchToPhoneBtn" style="display: block; margin-top: 10px;">Send OTP to Phone Number</button>
-      </form>
-
-      <!-- Reset Password Form (common for both phone and email) -->
-      <form id="resetPasswordForm" style="display:none;">
-        <div class="form-group">
-          <label for="otpCode">OTP Code</label>
-          <input type="text" id="otpCode" required>
-        </div>
-        <div class="form-group">
-          <label for="newPassword">New Password</label>
-          <input type="password" id="newPassword" required>
-        </div>
-        <div class="form-group">
-          <label for="confirmNewPassword">Confirm New Password</label>
-          <input type="password" id="confirmNewPassword" required>
-        </div>
-        <button type="submit" class="auth-btn" id="resetPasswordSubmitBtn">Reset Password</button>
-        <button type="button" class="text-button" id="resendOtpBtn">Resend OTP</button>
-      </form>
-    </div>
-  </div>
+  
 
   <!-- Edit Name Modal -->
   <div id="editNameModal" class="modal">
@@ -1352,7 +1250,7 @@ body.modal-open {
       <form id="editNameForm">
         <div class="form-group">
           <label for="newName">New Name</label>
-          <input type="text" id="newName" required>
+          <input type="text" id="newName" required onkeydown="return event.key != ' '">
         </div>
         <button type="submit" class="auth-btn">Save Name</button>
       </form>
@@ -1618,11 +1516,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentUserId = userProfile ? userProfile.id : null; // Use id as ID
         console.log("Current user ID in renderAllStories:", currentUserId); // Debug log
 
+        const isAccountPage = document.querySelector('#account.active') !== null;
         if (stories.length > 0) {
           storiesGrid.innerHTML = stories.map(story => {
             const isCurrentUserStory = (currentUserId && story.userId === currentUserId);
             console.log(`createStoryCardHtml - Story: ${story.title}, story.userId: ${story.userId}, currentUserId: ${currentUserId}, isCurrentUserStory: ${isCurrentUserStory}, isAdmin: ${userProfile ? userProfile.isAdmin : false}`); // Debug log
-            return createStoryCardHtml(story, isCurrentUserStory, userProfile);
+            return createStoryCardHtml(story, isCurrentUserStory, userProfile, isAccountPage);
           }).join('');
         } else {
           storiesGrid.innerHTML = '<p style="text-align: center; width: 100%; margin-top: 20px; color: var(--text-color);">No stories posted yet.</p>';
@@ -1640,11 +1539,19 @@ document.addEventListener("DOMContentLoaded", () => {
       themeToggle.textContent = document.documentElement.classList.contains("dark-mode") ? "☀️" : "🌙";
     });
 
+    function logout() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("userProfile");
+      loadProfile();
+      showToast("You have been logged out.");
+    }
+
     // --- AUTH MODAL ---
     document.getElementById("closeAuthModal").addEventListener("click", () => {
       document.getElementById("authModal").classList.remove("active");
     });
     document.getElementById("openAuthBtn").addEventListener("click", () => {
+      console.log("openAuthBtn clicked");
       if (token()) { // If logged in, this button is now "Logout"
         logout();
       } else {
@@ -1719,34 +1626,21 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("registerEmail").value;
       const password = document.getElementById("registerPassword").value;
       const confirmPassword = document.getElementById("registerConfirmPassword").value;
-      const phonePrefix = document.getElementById("registerPhonePrefix").value; // Get phone prefix
-      const phoneNumber = phonePrefix + document.getElementById("registerPhone").value; // Combine prefix and number
+      
 
       // Name validation
-      name = name.trim(); // Trim leading/trailing spaces
-      if (name.length < 2 || name.length > 20) {
-        showToast("Name must be between 2 and 20 characters long.", 'error');
-        return;
-      }
-      if (!/^[a-zA-Z0-9\s\-\'\.]+$/.test(name)) { // Allowed characters
-        showToast("Name can only contain letters, numbers, spaces, hyphens, apostrophes, and periods.", 'error');
-        return;
-      }
-      if (/\s\s+/.test(name)) { // No consecutive spaces
-        showToast("Name cannot contain consecutive spaces.", 'error');
+      if (name.includes(' ')|| name.length < 2 || name.length > 20 || !/^[a-zA-Z0-9]+$/.test(name)) {
+        showToast("Name must be 2-20 characters, contain no spaces, and only contain letters and numbers.", 'error');
         return;
       }
 
-      if (password.length < 5) {
-        showToast("Password must be at least 5 characters long.", 'error');
-        return;
-      }
-      if (/\s/.test(password)) { // Check for any whitespace
-        showToast("Password cannot contain spaces.", 'error');
+      // Password validation
+      if (password.includes(' ')|| password.length < 5) {
+        showToast("Password must be at least 5 characters and contain no spaces.", 'error');
         return;
       }
       if (password !== confirmPassword) {
-        showToast("Passwords do not match.", 'error'); // Changed alert to showToast
+        showToast("Passwords do not match.", 'error');
         return;
       }
 
@@ -1754,7 +1648,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const res = await fetch(`${API_BASE}/register`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, password, phoneNumber }), // Include combined phone number
+          body: JSON.stringify({ name, email, password }),
         });
         const data = await res.json();
         if (res.ok) {
@@ -2041,20 +1935,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById('nameConfirmModal').classList.remove('active');
     }
 
-    // Form switching logic
-    document.getElementById('switchToEmailBtn').addEventListener('click', () => {
-      document.getElementById('forgotPasswordForm').style.display = 'none';
-      document.getElementById('forgotEmailForm').style.display = 'block';
-      document.getElementById('resetPasswordForm').style.display = 'none'; // Ensure reset form is hidden
-      document.getElementById('forgotEmail').value = ''; // Clear email field
-    });
-
-    document.getElementById('switchToPhoneBtn').addEventListener('click', () => {
-      document.getElementById('forgotPasswordForm').style.display = 'block';
-      document.getElementById('forgotEmailForm').style.display = 'none';
-      document.getElementById('resetPasswordForm').style.display = 'none'; // Ensure reset form is hidden
-      document.getElementById('forgotPhone').value = ''; // Clear phone field
-    });
+    
     let storyIdToDelete = null; // Global variable to store story ID
 
     let toastTimeout;
@@ -2086,7 +1967,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let editingStoryId = null; // Global variable to store the ID of the story being edited
 
-    // --- AUTOCOMPLETE ---    
+    // --- AUTOCOMPLETE ---
     const searchInput = document.getElementById("searchInput");
     const autocompleteContainer = document.getElementById("autocomplete-container");
 
@@ -2304,11 +2185,12 @@ document.addEventListener("DOMContentLoaded", () => {
           const storyCard = document.querySelector(`.story-card[data-story-id='${storyId}']`);
           if (storyCard) {
             const reactionContainer = storyCard.querySelector('.reactions-container');
-            const emojis = ['👍', '❤️', '😂', '😮', '🔥'];
+            const emojis = ['👍', '❤️', '😂', '🔥'];
             const reactionsHtml = emojis.map(emoji => {
               const count = updatedStory.reactions[emoji] || 0;
               const reactedClass = count > 0 ? 'reacted' : '';
-              return `<div class="reaction ${reactedClass}" data-emoji="${emoji}" onclick="event.stopPropagation(); handleReactionClick('${storyId}', '${emoji}', this)">
+              const onclickAttribute = isAccountPage ? '' : `onclick="event.stopPropagation(); handleReactionClick('${storyId}', '${emoji}', this)"`;
+              return `<div class="reaction ${reactedClass}" data-emoji="${emoji}" ${onclickAttribute}>
                         <span class="emoji">${emoji}</span>
                         <span class="count">${count}</span>
                       </div>`;
@@ -2350,18 +2232,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    function createStoryCardHtml(story, isCurrentUserStory, userProfile) {
+    function createStoryCardHtml(story, isCurrentUserStory, userProfile, isAccountPage) {
       // Ensure story.content is not null or undefined before calling substring
       const storyContentPreview = story.content ? story.content.substring(0, 100) + '...' : '';
       const authorAvatar = story.avatarUrl || generateDefaultAvatar(story.author);
       const createdAt = new Date(story.createdAt).toLocaleDateString();
 
       const reactions = story.reactions || {};
-      const emojis = ['👍', '❤️', '😂', '😮', '🔥'];
+      const emojis = ['👍', '❤️', '😂', '🔥'];
       const reactionsHtml = emojis.map(emoji => {
         const count = reactions[emoji] || 0;
         const reactedClass = count > 0 ? 'reacted' : '';
-        return `<div class="reaction ${reactedClass}" data-emoji="${emoji}" onclick="event.stopPropagation(); handleReactionClick('${story.id}', '${emoji}', this)">
+        const onclickAttribute = isAccountPage ? '' : `onclick="event.stopPropagation(); handleReactionClick('${story.id}', '${emoji}', this)"`;
+        return `<div class="reaction ${reactedClass}" data-emoji="${emoji}" ${onclickAttribute}>
                   <span class="emoji">${emoji}</span>
                   <span class="count">${count}</span>
                 </div>`;
@@ -2883,10 +2766,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (userStories.length > 0) {
     // Display only the first 5 stories
     const limitedStories = userStories.slice(0, 5);
+    const isAccountPage = document.querySelector('#account.active') !== null;
     myStoriesContainer.innerHTML = limitedStories.map(story => {
       const isCurrentUserStory = (userId && story.userId === userId);
       const userProfile = JSON.parse(localStorage.getItem('userProfile'));
-      return createStoryCardHtml(story, isCurrentUserStory, userProfile);
+      return createStoryCardHtml(story, isCurrentUserStory, userProfile, isAccountPage);
     }).join('');
 
     // Add "View All" button if there are more than 5 stories
@@ -3555,7 +3439,7 @@ async function renderLibrary() {
         showToast("Name must be between 2 and 20 characters long.", 'error');
         return;
       }
-      if (!/^[a-zA-Z0-9\s\-\'\.]+$/.test(newName)) { // Allowed characters
+      if (!/^[a-zA-Z0-9\s\-\'.]+\$/.test(newName)) { // Allowed characters
         showToast("Name can only contain letters, numbers, spaces, hyphens, apostrophes, and periods.", 'error');
         return;
       }
@@ -3658,5 +3542,31 @@ async function renderLibrary() {
 
   <div id="customToast"></div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const authBtn = document.getElementById("openAuthBtn");
+  const authModal = document.getElementById("authModal"); // your login/register modal
+  const closeBtn = document.querySelector(".close-modal");
+
+  if (authBtn && authModal) {
+    authBtn.addEventListener("click", () => {
+      authModal.style.display = "block";
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      authModal.style.display = "none";
+    });
+  }
+
+  // Close modal when clicking outside of content
+  window.addEventListener("click", (event) => {
+    if (event.target === authModal) {
+      authModal.style.display = "none";
+    }
+  });
+});
+</script>
 </body>
 </html>
