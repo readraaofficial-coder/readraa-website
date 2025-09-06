@@ -1021,22 +1021,22 @@ body.modal-open {
             </label>
           </div>
           <button type="submit" class="auth-btn">Login</button>
-<p class="forgot-password-link disabled-feature" onclick="showToast('This feature will be added soon.')">Forgot Password?</p>
+
         </form>
 
         <form class="auth-form" id="registerForm">
           <div class="form-group">
             <label for="registerName">Full Name</label>
-            <input type="text" id="registerName" required>
+            <input type="text" id="registerName" required onkeydown="if(event.key === ' ') event.preventDefault();">
           </div>
           <div class="form-group">
             <label for="registerEmail">Email</label>
-            <input type="email" id="registerEmail" required>
+            <input type="email" id="registerEmail" required onkeydown="if(event.key === ' ') event.preventDefault();">
           </div>
           <div class="form-group">
             <label for="registerPassword">Password</label>
             <div class="password-container">
-              <input type="password" id="registerPassword" required>
+              <input type="password" id="registerPassword" required onkeydown="if(event.key === ' ') event.preventDefault();">
               <i class="fas fa-eye toggle-password"></i>
             </div>
           </div>
@@ -1047,16 +1047,7 @@ body.modal-open {
               <i class="fas fa-eye toggle-password"></i>
             </div>
           </div>
-          <div class="form-group">
-            <label for="registerPhone">Phone Number</label>
-            <p style="font-size: 0.8em; color: #888; margin-top: -10px; margin-bottom: 5px;">Optional: Provide your number for easier password recovery.</p>
-            <div style="display: flex; gap: 5px; margin-bottom: 15px;">
-              <select id="registerPhonePrefix" disabled class="disabled-feature" onclick="showToast('This feature will be added soon.')" style="width: 100px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: var(--bg-color); color: var(--text-color); z-index: 10;">
-                <!-- Options will be populated by JavaScript -->
-              </select>
-              <input type="tel" id="registerPhone" disabled class="disabled-feature" value="Feature coming soon" onclick="showToast('This feature will be added soon.')" style="flex-grow: 1;">
-            </div>
-          </div>
+          
           <button type="submit" class="auth-btn">Register</button>
         </form>
       </div>
@@ -1315,56 +1306,7 @@ body.modal-open {
     </div>
   </div>
 
-  <!-- Forgot Password Modal -->
-  <div id="forgotPasswordModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeForgotPasswordModal()">&times;</span>
-      <h2>Forgot Password</h2>
-
-      <!-- Phone Number Recovery Form -->
-      <form id="forgotPasswordForm">
-        <div class="form-group">
-          <label for="forgotPhone">Phone Number</label>
-          <div style="display: flex; gap: 5px; margin-bottom: 15px;">
-            <select id="forgotPhonePrefix" style="width: 100px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: var(--bg-color); color: var(--text-color); z-index: 10;">
-              <!-- Options will be populated by JavaScript -->
-            </select>
-            <input type="tel" id="forgotPhone" placeholder="e.g., 5551234567" required style="flex-grow: 1;">
-          </div>
-        </div>
-        <button type="submit" class="auth-btn" id="sendOtpBtn">Send OTP</button>
-        <button type="button" class="text-button" id="switchToEmailBtn" style="display: block; margin-top: 10px;">Send OTP to Email</button>
-      </form>
-
-      <!-- Email Recovery Form (initially hidden) -->
-      <form id="forgotEmailForm" style="display:none;">
-        <div class="form-group">
-          <label for="forgotEmail">Email Address</label>
-          <input type="email" id="forgotEmail" required>
-        </div>
-        <button type="submit" class="auth-btn" id="sendOtpEmailBtn">Send OTP</button>
-        <button type="button" class="text-button" id="switchToPhoneBtn" style="display: block; margin-top: 10px;">Send OTP to Phone Number</button>
-      </form>
-
-      <!-- Reset Password Form (common for both phone and email) -->
-      <form id="resetPasswordForm" style="display:none;">
-        <div class="form-group">
-          <label for="otpCode">OTP Code</label>
-          <input type="text" id="otpCode" required>
-        </div>
-        <div class="form-group">
-          <label for="newPassword">New Password</label>
-          <input type="password" id="newPassword" required>
-        </div>
-        <div class="form-group">
-          <label for="confirmNewPassword">Confirm New Password</label>
-          <input type="password" id="confirmNewPassword" required>
-        </div>
-        <button type="submit" class="auth-btn" id="resetPasswordSubmitBtn">Reset Password</button>
-        <button type="button" class="text-button" id="resendOtpBtn">Resend OTP</button>
-      </form>
-    </div>
-  </div>
+  
 
   <!-- Edit Name Modal -->
   <div id="editNameModal" class="modal">
@@ -1399,171 +1341,7 @@ body.modal-open {
   <script>
     const token = () => localStorage.getItem("token"); // Moved to top
     const API_BASE = "/api";
-let currentOtpMethod = 'phone'; // To track if OTP was sent via phone or email
 
-// Country codes data (curated list with ISO codes and prefixes)
-const countryCodes = [
-  { name: "AF", code: "AF", prefix: "+93" },
-  { name: "AL", code: "AL", prefix: "+355" },
-  { name: "DZ", code: "DZ", prefix: "+213" },
-  { name: "AD", code: "AD", prefix: "+376" },
-  { name: "AO", code: "AO", prefix: "+244" },
-  { name: "AR", code: "AR", prefix: "+54" },
-  { name: "AU", code: "AU", prefix: "+61" },
-  { name: "AT", code: "AT", prefix: "+43" },
-  { name: "BD", code: "BD", prefix: "+880" },
-  { name: "BY", code: "BY", prefix: "+375" },
-  { name: "BE", code: "BE", prefix: "+32" },
-  { name: "BT", code: "BT", prefix: "+975" },
-  { name: "BO", code: "BO", prefix: "+591" },
-  { name: "BA", code: "BA", prefix: "+387" },
-  { name: "BR", code: "BR", prefix: "+55" },
-  { name: "BG", code: "BG", prefix: "+359" },
-  { name: "BF", code: "BF", prefix: "+226" },
-  { name: "KH", code: "KH", prefix: "+855" },
-  { name: "CM", code: "CM", prefix: "+237" },
-  { name: "CA", code: "CA", prefix: "+1" },
-  { name: "CF", code: "CF", prefix: "+236" },
-  { name: "TD", code: "TD", prefix: "+235" },
-  { name: "CL", code: "CL", prefix: "+56" },
-  { name: "CN", code: "CN", prefix: "+86" },
-  { name: "CO", code: "CO", prefix: "+57" },
-  { name: "CD", code: "CD", prefix: "+243" },
-  { name: "CG", code: "CG", prefix: "+242" },
-  { name: "CR", code: "CR", prefix: "+506" },
-  { name: "HR", code: "HR", prefix: "+385" },
-  { name: "CU", code: "CU", prefix: "+53" },
-  { name: "CY", code: "CY", prefix: "+357" },
-  { name: "CZ", code: "CZ", prefix: "+420" },
-  { name: "DK", code: "DK", prefix: "+45" },
-  { name: "DJ", code: "DJ", prefix: "+253" },
-  { name: "DO", code: "DO", prefix: "+1" },
-  { name: "EC", code: "EC", prefix: "+593" },
-  { name: "EG", code: "EG", prefix: "+20" },
-  { name: "SV", code: "SV", prefix: "+503" },
-  { name: "EE", code: "EE", prefix: "+372" },
-  { name: "ET", code: "ET", prefix: "+251" },
-  { name: "FI", code: "FI", prefix: "+358" },
-  { name: "FR", code: "FR", prefix: "+33" },
-  { name: "GA", code: "GA", prefix: "+241" },
-  { name: "GM", code: "GM", prefix: "+220" },
-  { name: "GE", code: "GE", prefix: "+995" },
-  { name: "DE", code: "DE", prefix: "+49" },
-  { name: "GH", code: "GH", prefix: "+233" },
-  { name: "GR", code: "GR", prefix: "+30" },
-  { name: "GT", code: "GT", prefix: "+502" },
-  { name: "GN", code: "GN", prefix: "+224" },
-  { name: "HN", code: "HN", prefix: "+504" },
-  { name: "HK", code: "HK", prefix: "+852" },
-  { name: "HU", code: "HU", prefix: "+36" },
-  { name: "IS", code: "IS", prefix: "+354" },
-  { name: "IN", code: "IN", prefix: "+91" },
-  { name: "ID", code: "ID", prefix: "+62" },
-  { name: "IR", code: "IR", prefix: "+98" },
-  { name: "IQ", code: "IQ", prefix: "+964" },
-  { name: "IE", code: "IE", prefix: "+353" },
-  { name: "IL", code: "IL", prefix: "+972" },
-  { name: "IT", code: "IT", prefix: "+39" },
-  { name: "CI", code: "CI", prefix: "+225" },
-  { name: "JP", code: "JP", prefix: "+81" },
-  { name: "JO", code: "JO", prefix: "+962" },
-  { name: "KZ", code: "KZ", prefix: "+7" },
-  { name: "KE", code: "KE", prefix: "+254" },
-  { name: "KW", code: "KW", prefix: "+965" },
-  { name: "LA", code: "LA", prefix: "+856" },
-  { name: "LV", code: "LV", prefix: "+371" },
-  { name: "LB", code: "LB", prefix: "+961" },
-  { name: "LR", code: "LR", prefix: "+231" },
-  { name: "LY", code: "LY", prefix: "+218" },
-  { name: "LT", code: "LT", prefix: "+370" },
-  { name: "LU", code: "LU", prefix: "+352" },
-  { name: "MG", code: "MG", prefix: "+261" },
-  { name: "MY", code: "MY", prefix: "+60" },
-  { name: "ML", code: "ML", prefix: "+223" },
-  { name: "MT", code: "MT", prefix: "+356" },
-  { name: "MR", code: "MR", prefix: "+222" },
-  { name: "MX", code: "MX", prefix: "+52" },
-  { name: "MD", code: "MD", prefix: "+373" },
-  { name: "MC", code: "MC", prefix: "+377" },
-  { name: "MN", code: "MN", prefix: "+976" },
-  { name: "ME", code: "ME", prefix: "+382" },
-  { name: "MA", code: "MA", prefix: "+212" },
-  { name: "MZ", code: "MZ", prefix: "+258" },
-  { name: "MM", code: "MM", prefix: "+95" },
-  { name: "NP", code: "NP", prefix: "+977" },
-  { name: "NL", code: "NL", prefix: "+31" },
-  { name: "NZ", code: "NZ", prefix: "+64" },
-  { name: "NI", code: "NI", prefix: "+505" },
-  { name: "NE", code: "NE", prefix: "+227" },
-  { name: "NG", code: "NG", prefix: "+234" },
-  { name: "KP", code: "KP", prefix: "+850" },
-  { name: "MK", code: "MK", prefix: "+389" },
-  { name: "NO", code: "NO", prefix: "+47" },
-  { name: "OM", code: "OM", prefix: "+968" },
-  { name: "PK", code: "PK", prefix: "+92" },
-  { name: "PA", code: "PA", prefix: "+507" },
-  { name: "PY", code: "PY", prefix: "+595" },
-  { name: "PE", code: "PE", prefix: "+51" },
-  { name: "PH", code: "PH", prefix: "+63" },
-  { name: "PL", code: "PL", prefix: "+48" },
-  { name: "PT", prefix: "+351" },
-  { name: "QA", prefix: "+974" },
-  { name: "RO", prefix: "+40" },
-  { name: "RU", prefix: "+7" },
-  { name: "RW", prefix: "+250" },
-  { name: "SA", prefix: "+966" },
-  { name: "SN", prefix: "+221" },
-  { name: "RS", prefix: "+381" },
-  { name: "SG", prefix: "+65" },
-  { name: "SK", prefix: "+421" },
-  { name: "SI", prefix: "+386" },
-  { name: "SO", prefix: "+252" },
-  { name: "ZA", prefix: "+27" },
-  { name: "KR", prefix: "+82" },
-  { name: "ES", prefix: "+34" },
-  { name: "LK", prefix: "+94" },
-  { name: "SD", prefix: "+249" },
-  { name: "SE", prefix: "+46" },
-  { name: "CH", prefix: "+41" },
-  { name: "SY", prefix: "+963" },
-  { name: "TZ", prefix: "+255" },
-  { name: "TH", prefix: "+66" },
-  { name: "TG", prefix: "+228" },
-  { name: "TN", prefix: "+216" },
-  { name: "TR", prefix: "+90" },
-  { name: "UG", prefix: "+256" },
-  { name: "UA", prefix: "+380" },
-  { name: "AE", prefix: "+971" },
-  { name: "GB", prefix: "+44" },
-  { name: "US", prefix: "+1" },
-  { name: "UY", prefix: "+598" },
-  { name: "UZ", prefix: "+998" },
-  { name: "VE", prefix: "+58" },
-  { name: "VN", prefix: "+84" },
-  { name: "YE", prefix: "+967" },
-  { name: "ZM", prefix: "+260" },
-  { name: "ZW", prefix: "+263" },
-].sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
-
-// Function to populate country code dropdowns
-function populateCountryCodes(selectElementId) {
-  const selectElement = document.getElementById(selectElementId);
-  if (!selectElement) return;
-
-  // Clear existing options
-  selectElement.innerHTML = '';
-
-  countryCodes.forEach(country => {
-    const option = document.createElement("option");
-    option.value = country.prefix;
-    // Temporarily remove <img> tag to debug display issue
-    option.textContent = `${country.name} (${country.prefix})`; // Display short name and prefix
-    selectElement.appendChild(option);
-  });
-
-  // Set a default value, e.g., +1 for US
-  selectElement.value = "+1";
-}
 
 // Call populate function when the DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -1738,33 +1516,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- REGISTER FORM SUBMISSION ---
     document.getElementById("registerForm").addEventListener("submit", async (e) => {
       e.preventDefault();
-      let name = document.getElementById("registerName").value; // Use let to allow modification
+      let name = document.getElementById("registerName").value;
       const email = document.getElementById("registerEmail").value;
       const password = document.getElementById("registerPassword").value;
       const confirmPassword = document.getElementById("registerConfirmPassword").value;
-      const phonePrefix = document.getElementById("registerPhonePrefix").value; // Get phone prefix
-      const phoneNumber = phonePrefix + document.getElementById("registerPhone").value; // Combine prefix and number
 
       // Name validation
-      console.log("Name input:", name);
-      name = name.trim(); // Trim leading/trailing spaces
-      console.log("Trimmed name:", name);
-      if (name.length < 2 || name.length > 20) {
-        showToast("Name must be between 2 and 20 characters long.", 'error');
+      if (name.length < 2 || name.length > 15) {
+        showToast("Name must be between 2 and 15 characters long.", 'error');
         return;
       }
-      console.log("Validation result:", /^[a-zA-Z\s]+$/.test(name));
-      if (!/^[a-zA-Z\s]+$/.test(name)) {
-        showToast("Name can only contain letters and spaces.", 'error');
-        return;
-      }
-      if (/\s\s+/.test(name)) { // No consecutive spaces
-        showToast("Name cannot contain consecutive spaces.", 'error');
+      if (!/^[a-zA-Z0-9_*\-^!]+$/.test(name)) {
+        showToast("Name can only contain letters, numbers, and the following special characters: _ * - ^ !", 'error');
         return;
       }
 
-      if (password.length < 5) {
-        showToast("Password must be at least 5 characters long.", 'error');
+      if (password.length < 5 || password.length > 20) {
+        showToast("Password must be between 5 and 20 characters long.", 'error');
         return;
       }
       if (/\s/.test(password)) { // Check for any whitespace
@@ -1772,7 +1540,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
       if (password !== confirmPassword) {
-        showToast("Passwords do not match.", 'error'); // Changed alert to showToast
+        showToast("Passwords do not match.", 'error');
         return;
       }
 
@@ -1780,7 +1548,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const res = await fetch(`${API_BASE}/register`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, password, phoneNumber }), // Include combined phone number
+          body: JSON.stringify({ name, email, password }),
         });
         const data = await res.json();
         if (res.ok) {
@@ -2022,24 +1790,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    function openForgotPasswordModal() {
-      document.getElementById('forgotPasswordModal').classList.add('active');
-      document.getElementById('forgotPasswordForm').style.display = 'block';
-      document.getElementById('resetPasswordForm').style.display = 'none';
-      populateCountryCodes("forgotPhonePrefix"); // Populate dropdown when modal opens
-    }
+    
 
-    function closeForgotPasswordModal() {
-      document.getElementById('forgotPasswordModal').classList.remove('active');
-      document.getElementById('forgotPhone').value = '';
-      document.getElementById('otpCode').value = '';
-      document.getElementById('newPassword').value = '';
-      document.getElementById('confirmNewPassword').value = '';
-      // Reset to phone form when closing
-      document.getElementById('forgotPasswordForm').style.display = 'block';
-      document.getElementById('forgotEmailForm').style.display = 'none';
-      document.getElementById('resetPasswordForm').style.display = 'none';
-    }
+    
 
     function openEditNameModal() {
       document.getElementById('editNameModal').classList.add('active');
@@ -2067,20 +1820,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById('nameConfirmModal').classList.remove('active');
     }
 
-    // Form switching logic
-    document.getElementById('switchToEmailBtn').addEventListener('click', () => {
-      document.getElementById('forgotPasswordForm').style.display = 'none';
-      document.getElementById('forgotEmailForm').style.display = 'block';
-      document.getElementById('resetPasswordForm').style.display = 'none'; // Ensure reset form is hidden
-      document.getElementById('forgotEmail').value = ''; // Clear email field
-    });
-
-    document.getElementById('switchToPhoneBtn').addEventListener('click', () => {
-      document.getElementById('forgotPasswordForm').style.display = 'block';
-      document.getElementById('forgotEmailForm').style.display = 'none';
-      document.getElementById('resetPasswordForm').style.display = 'none'; // Ensure reset form is hidden
-      document.getElementById('forgotPhone').value = ''; // Clear phone field
-    });
+    
     let storyIdToDelete = null; // Global variable to store story ID
 
     let toastTimeout;
@@ -3416,64 +3156,9 @@ async function renderLibrary() {
       document.getElementById('themeSelectionPopup').classList.remove('active');
     });
   // --- FORGOT PASSWORD ---
-    document.getElementById("forgotPasswordForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const phonePrefix = document.getElementById("forgotPhonePrefix").value; // Get phone prefix
-      const phoneNumber = phonePrefix + document.getElementById("forgotPhone").value; // Combine prefix and number
-      currentOtpMethod = 'phone'; // Set OTP method to phone
+    
 
-      try {
-        const res = await fetch(`${API_BASE}/send-otp`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ phoneNumber }), // Include combined phone number
-        });
-
-        const data = await res.json();
-
-        if (res.ok) {
-          showToast(data.message);
-          document.getElementById("forgotPasswordForm").style.display = 'none';
-          document.getElementById("resetPasswordForm").style.display = 'block';
-        } else {
-          showToast(data.message || "Failed to send OTP.", 'error');
-        }
-      } catch (error) {
-        console.error("Send OTP error:", error);
-        showToast("An error occurred while sending OTP.", 'error');
-      }
-    });
-
-    document.getElementById("sendOtpEmailBtn").addEventListener("click", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("forgotEmail").value;
-      currentOtpMethod = 'email'; // Set OTP method to email
-
-      try {
-        const res = await fetch(`${API_BASE}/send-otp-email`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
-        });
-
-        const data = await res.json();
-
-        if (res.ok) {
-          showToast(data.message);
-          document.getElementById("forgotEmailForm").style.display = 'none';
-          document.getElementById("resetPasswordForm").style.display = 'block';
-        } else {
-          showToast(data.message || "Failed to send OTP to email.", 'error');
-        }
-      } catch (error) {
-        console.error("Send OTP to email error:", error);
-        showToast("An error occurred while sending OTP to email.", 'error');
-      }
-    });
+    
 
     document.getElementById("resetPasswordForm").addEventListener("submit", async (e) => {
       e.preventDefault();
