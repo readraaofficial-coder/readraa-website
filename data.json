@@ -237,6 +237,13 @@
       "viewed": [],
       "nameChangeCount": 0,
       "lastChangeTimestamp": null
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 39123574adb924f9b28f97284622d08127c67af7
+>>>>>>> origin/main
     },
     {
       "id": 1757044631337,
@@ -248,6 +255,7 @@
       "viewed": [],
       "nameChangeCount": 0,
       "lastChangeTimestamp": null
+<<<<<<< HEAD
     },
     {
       "id": 1757084806087,
@@ -289,11 +297,25 @@
       "viewed": [],
       "nameChangeCount": 0,
       "lastChangeTimestamp": null
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7b1f1cbef907773a5fdb16c84c92e7a262ac050d
+>>>>>>> 39123574adb924f9b28f97284622d08127c67af7
+>>>>>>> origin/main
     }
   ],
   "pdfs": [],
   "stories": [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 39123574adb924f9b28f97284622d08127c67af7
+>>>>>>> origin/main
       "id": 1757044540253,
       "userId": 1756789317150,
       "author": "R.S.M.",
@@ -308,6 +330,7 @@
           1756789317150
         ]
       }
+<<<<<<< HEAD
     }
   ],
   "drafts": [
@@ -358,6 +381,124 @@
       "title": "eed",
       "content": "dede",
       "createdAt": "2025-09-05T15:03:17.952Z"
+=======
+<<<<<<< HEAD
+=======
+=======
+      "id": 1757005255183,
+      "userId": 1756645043353,
+      "author": "rishikesh",
+      "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=1",
+      "title": "gbfg",
+      "content": "gh",
+      "createdAt": "2025-09-04T17:00:55.183Z",
+      "comments": [],
+      "reactions": {
+        "👍": [],
+        "❤️": [
+          1757028052085
+        ],
+        "😂": [],
+        "🔥": []
+      }
+    },
+    {
+      "id": 1757040078948,
+      "userId": 1757028052085,
+      "author": "tgr",
+      "title": "qr4",
+      "content": "34t54",
+      "createdAt": "2025-09-05T02:41:18.948Z",
+      "comments": [
+        {
+          "id": 1757040296913,
+          "userId": 1757028052085,
+          "author": "tgr",
+          "text": "th",
+          "createdAt": "2025-09-05T02:44:56.913Z"
+        }
+      ],
+      "updatedAt": "2025-09-05T02:41:27.207Z",
+      "reactions": {
+        "🔥": [
+          1757028052085
+        ],
+        "😂": [],
+        "❤️": [],
+        "👍": []
+      }
+    },
+    {
+      "id": 1757040702114,
+      "userId": 1757028052085,
+      "author": "tgr",
+      "title": "ge",
+      "content": "gr",
+      "createdAt": "2025-09-05T02:51:42.114Z",
+      "comments": [],
+      "reactions": {
+        "❤️": []
+      }
+    },
+    {
+      "id": 1757040709710,
+      "userId": 1757028052085,
+      "author": "tgr",
+      "title": "te",
+      "content": "er",
+      "createdAt": "2025-09-05T02:51:49.710Z",
+      "comments": []
+    },
+    {
+      "id": 1757040715503,
+      "userId": 1757028052085,
+      "author": "tgr",
+      "title": "r",
+      "content": "rf",
+      "createdAt": "2025-09-05T02:51:55.503Z",
+      "comments": [],
+      "reactions": {
+        "❤️": [
+          1757028052085
+        ]
+      }
+    },
+    {
+      "id": 1757040731757,
+      "userId": 1757028052085,
+      "author": "tgr",
+      "title": "rg",
+      "content": "rw",
+      "createdAt": "2025-09-05T02:52:11.758Z",
+      "comments": [],
+      "reactions": {
+        "😂": [],
+        "🔥": [
+          1757028052085
+        ]
+      }
+    },
+    {
+      "id": 1757040744486,
+      "userId": 1757028052085,
+      "author": "tgr",
+      "title": "wy6ee",
+      "content": "5te",
+      "createdAt": "2025-09-05T02:52:24.486Z",
+      "comments": []
+    },
+    {
+      "id": 1757043860546,
+      "userId": 1756789317150,
+      "author": "R.S.M.",
+      "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=98",
+      "title": "teh",
+      "content": "65",
+      "createdAt": "2025-09-05T03:44:20.546Z",
+      "comments": []
+>>>>>>> 7b1f1cbef907773a5fdb16c84c92e7a262ac050d
+>>>>>>> 39123574adb924f9b28f97284622d08127c67af7
+>>>>>>> origin/main
     }
   ],
   "otps": [

@@ -164,8 +164,16 @@ app.post("/api/register", async (req, res) => {
   if (name.length < 2 || name.length > 15) {
     return res.status(400).json({ message: "Name must be between 2 and 15 characters long." });
   }
+<<<<<<< HEAD
   if (!/^[a-zA-Z0-9_*\-^!]+$/.test(name)) {
     return res.status(400).json({ message: "Name can only contain letters, numbers, and the following special characters: _ * - ^ !" });
+=======
+  if (!/^[a-zA-Z\s]+$/.test(name)) {
+    return res.status(400).json({ message: "Name can only contain letters and spaces." });
+  }
+  if (/\s\s+/.test(name)) { // No consecutive spaces
+    return res.status(400).json({ message: "Name cannot contain consecutive spaces." });
+>>>>>>> origin/main
   }
 
   // Password validation
