@@ -224,7 +224,7 @@ app.post("/api/register", async (req, res) => {
       return res.status(400).json({ message: "Phone number already registered" });
     }
   } */
-  const hashed = await bcrypt.hash(password, 10
+  const hashed = await bcrypt.hash(password, 10);
   const newUser = {
     id: Date.now(),
     name,
