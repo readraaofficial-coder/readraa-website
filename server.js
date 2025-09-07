@@ -9,9 +9,7 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = process.env.PORT || 5003;
 const PORT = process.env.PORT || 5000;
-const PORT = process.env.PORT || 5003;
 const DATA_FILE = path.join(__dirname, "data.json");
 const SECRET = process.env.JWT_SECRET || "supersecretkey"; // set env var in production
 
