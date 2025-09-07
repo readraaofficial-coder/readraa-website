@@ -155,7 +155,7 @@
     {
       "id": 1756789317150,
       "name": "R.S.M.",
-      "email": "readraa@gmail.com",
+      "email": "readraaofficial@gmail.com",
       "password": "$2a$10$Yean0rofo22HeyiEtCAqAuPQwZ2.wCkgLwqJ0nNsmysvycnQqmnSu",
       "favorites": [],
       "viewed": [],
@@ -224,22 +224,122 @@
       "viewed": [],
       "nameChangeCount": 0,
       "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757028052085,
+      "name": "tgr",
+      "email": "tg@gmail.com",
+      "password": "$2a$10$mX2TfiCkHRcvIiPWnbzHO.JC.3iabcyDDUnqsI7ZVAKWFcpXo6a3K",
+      "phoneNumber": null,
+      "favorites": [
+        "ATOMIC HABITS SUMMARY"
+      ],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757044631337,
+      "name": "std",
+      "email": "tds@gmail.com",
+      "password": "$2a$10$jUmGonMoHSDcv07o5OGpRePPDAzJPxI17p2UEEa2H0tJsi994L7BW",
+      "phoneNumber": null,
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757084806087,
+      "name": "rifjfj",
+      "email": "yus@gmail.com",
+      "password": "$2a$10$oOZl54aIe6aY67lZDB70E.WG6pscg7SKzVyl0LCaWlz8ypkmKnsCq",
+      "phoneNumber": "+1Feature coming soon",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
+    },
+    {
+      "id": 1757090071386,
+      "name": "hyufu",
+      "email": "u@gmail.com",
+      "password": "$2a$10$cQGv8ZxrjQ9FSXqpj52GQOLyzPzXI6WtcZjF825i/X/EWgu7B7fr.",
+      "favorites": [],
+      "viewed": [],
+      "nameChangeCount": 0,
+      "lastChangeTimestamp": null
     }
   ],
   "pdfs": [],
   "stories": [
     {
-      "id": 1757005255183,
-      "userId": 1756645043353,
-      "author": "rishikesh",
-      "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=1",
-      "title": "gbfg",
-      "content": "gh",
-      "createdAt": "2025-09-04T17:00:55.183Z",
-      "comments": []
+      "id": 1757044540253,
+      "userId": 1756789317150,
+      "author": "R.S.M.",
+      "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=98",
+      "title": "ADMIN",
+      "content": "Be the 2nd one to post story ",
+      "createdAt": "2025-09-05T03:55:40.253Z",
+      "comments": [],
+      "updatedAt": "2025-09-05T03:59:48.309Z",
+      "reactions": {
+        "😂": [
+          1756789317150
+        ]
+      }
     }
   ],
-  "drafts": [],
+  "drafts": [
+    {
+      "id": 1757084564492,
+      "userId": 1756645043353,
+      "author": "rishikesh",
+      "title": "rwf",
+      "content": "4qfws",
+      "createdAt": "2025-09-05T15:02:44.492Z"
+    },
+    {
+      "id": 1757084571224,
+      "userId": 1756645043353,
+      "author": "rishikesh",
+      "title": "dfs",
+      "content": "3fwre",
+      "createdAt": "2025-09-05T15:02:51.224Z"
+    },
+    {
+      "id": 1757084578809,
+      "userId": 1756645043353,
+      "author": "rishikesh",
+      "title": "ffef",
+      "content": "effs",
+      "createdAt": "2025-09-05T15:02:58.809Z"
+    },
+    {
+      "id": 1757084583993,
+      "userId": 1756645043353,
+      "author": "rishikesh",
+      "title": "dewdw",
+      "content": "weef",
+      "createdAt": "2025-09-05T15:03:03.993Z"
+    },
+    {
+      "id": 1757084591580,
+      "userId": 1756645043353,
+      "author": "rishikesh",
+      "title": "qfsdw",
+      "content": "dwa",
+      "createdAt": "2025-09-05T15:03:11.580Z"
+    },
+    {
+      "id": 1757084597952,
+      "userId": 1756645043353,
+      "author": "rishikesh",
+      "title": "eed",
+      "content": "dede",
+      "createdAt": "2025-09-05T15:03:17.952Z"
+    }
+  ],
   "otps": [
     {
       "userId": 1756918345921,
